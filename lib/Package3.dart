@@ -12,6 +12,8 @@ class Package3 extends StatefulWidget{
 class _Package3State extends State<Package3> {
   @override
   Widget build(BuildContext context) {
+
+    final player=AudioPlayer();
     return Center(
 
       child: Column(
@@ -22,7 +24,7 @@ class _Package3State extends State<Package3> {
 ElevatedButton(onPressed: (){
 
 
-  final player=AudioPlayer();
+
   player.play(AssetSource("audio/1112.mp3"));
 
 
@@ -31,60 +33,50 @@ ElevatedButton(onPressed: (){
 
 
 
-          final player=AudioPlayer();
+
           player.play(AssetSource("audio/1113.mp3"));
 
         }, child: Text("Surat ALfulq"),),
         ElevatedButton(onPressed: (){
 
-          final player=AudioPlayer();
+
           player.play(AssetSource("audio/1114.mp3"));
 
 
-        }, child: Text("Surat Alnas"),)
-
-,Center(
-  child: Container(margin: EdgeInsets.only(top: 40,left: 70),
+        }, child: Text("Surat Alnas"),),
 
 
-              child: Row(
-
-                  children: [
-
-
-                    ElevatedButton(onPressed: (){
+    ElevatedButton(onPressed: (){
 
 
 
-                      final player=AudioPlayer();
-                      player.stop();
 
-                    }, child: Icon(Icons.stop),),
+    player.stop();
 
-
-                    ElevatedButton(onPressed: (){
+    }, child: Icon(Icons.stop),),
 
 
-
-                      final player=AudioPlayer();
-                      player.pause();
-
-                    }, child: Icon(Icons.pause)),
-
-
-                    ElevatedButton(onPressed: (){
+    ElevatedButton(onPressed: (){
 
 
 
-                      final player=AudioPlayer();
-                      player.resume();
 
-                    }, child: Icon(Icons.start)),
+    player.pause();
+
+    }, child: Icon(Icons.pause)),
 
 
-                  ],
-                ),
-            ),),
+    ElevatedButton(onPressed: (){
+
+
+
+    player.resume();
+
+    }, child: Icon(Icons.start)),
+
+
+
+
 
 
       ],

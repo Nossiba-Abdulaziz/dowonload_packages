@@ -2,9 +2,14 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Package3 extends StatelessWidget{
+class Package3 extends StatefulWidget{
   const Package3({super.key});
 
+  @override
+  State<Package3> createState() => _Package3State();
+}
+
+class _Package3State extends State<Package3> {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -39,10 +44,9 @@ ElevatedButton(onPressed: (){
         }, child: Text("Surat Alnas"),)
 
 ,Center(
-  child: Container(margin: EdgeInsets.only(top: 40,left: 40),
+  child: Container(margin: EdgeInsets.only(top: 40,left: 70),
 
-            child: Padding(
-              padding: const EdgeInsets.only(right: 15),
+
               child: Row(
 
                   children: [
@@ -55,7 +59,7 @@ ElevatedButton(onPressed: (){
                       final player=AudioPlayer();
                       player.stop();
 
-                    }, child: Text("Stop"),),
+                    }, child: Icon(Icons.stop),),
 
 
                     ElevatedButton(onPressed: (){
@@ -65,7 +69,7 @@ ElevatedButton(onPressed: (){
                       final player=AudioPlayer();
                       player.pause();
 
-                    }, child: Text("Pause"),),
+                    }, child: Icon(Icons.pause)),
 
 
                     ElevatedButton(onPressed: (){
@@ -75,13 +79,13 @@ ElevatedButton(onPressed: (){
                       final player=AudioPlayer();
                       player.resume();
 
-                    }, child: Text("Resume"),),
+                    }, child: Icon(Icons.start)),
 
 
                   ],
                 ),
             ),),
-)
+
 
       ],
     ),
